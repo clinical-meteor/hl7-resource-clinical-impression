@@ -10,7 +10,7 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/clinical-meteor/hl7-resource-audit-event
+    working_directory: ~/clinical-meteor/hl7-resource-clinical-impression
     parallelism: 1
     shell: /bin/bash --login
 
@@ -110,15 +110,15 @@ jobs:
     - run: cd ../baseline && meteor npm install
     - run: cd ../baseline && meteor npm install react simpl-schema
     - run: cd ../baseline && mkdir packages && cd packages && mkdir hl7-resource-clinical-impression
-    - run: cp -R ./* ../baseline/packages/hl7-resource-audit-event
-    - run: cd ../baseline/packages/hl7-resource-audit-event&& pwd
+    - run: cp -R ./* ../baseline/packages/hl7-resource-clinical-impression
+    - run: cd ../baseline/packages/hl7-resource-clinical-impression&& pwd
     - run: cd ../baseline/packages && ls -la
 
     - run: cd ../baseline && npm i --save-dev selenium-webdriver@3.6.0 chromedriver
     - run: cd ../baseline && meteor add dispatch:mocha practicalmeteor:chai
     - run: cd ../baseline && meteor add clinical:hl7-resource-clinical-impression
     - run: cd ../baseline && mkdir imports 
-    - run: cp tests/ClinicalImpressionTests.tests.js ../baseline/imports/
+    - run: cp tests/ClinicalImpressions.tests.js ../baseline/imports/
 
 
     #- run the app
