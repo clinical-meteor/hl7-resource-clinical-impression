@@ -1,6 +1,6 @@
 Package.describe({
   name: 'clinical:hl7-resource-clinical-impression',
-  version: '2.0.1',
+  version: '2.0.2',
   summary: 'HL7 FHIR Resource - Clinical Impression',
   git: 'https://github.com/clinical-meteor/hl7-resource-clinical-impression',
   documentation: 'README.md'
@@ -37,5 +37,7 @@ Package.onUse(function (api) {
 
 
 Npm.depends({
-  "simpl-schema": "1.5.3"
+  "simpl-schema": "1.5.3",
+  "moment": "2.22.2",
+  "lodash": "4.17.4"
 })
